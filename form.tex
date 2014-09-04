@@ -99,11 +99,20 @@ Soit $ f : \mathbb{R} \rightarrow \mathbb{R} $, $2\pi$ périodique. Sa série de
 \begin{equation}
     \frac{\partial f}{\partial x} \sin(kx) = k \cos(kx) 
     \Leftrightarrow 
-    \int \sin(kx) dx = \frac{-\cos(kx)}{k}
+    \int \cos(kx) dx = \frac{\sin(kx)}{k}
 \end{equation}
 
 \begin{equation}
-    a
+    \frac{\partial f}{\partial x} k \sin(x) = k \cos(x) 
+    \Leftrightarrow 
+    \int k \cos(x) dx = k \sin(x)
 \end{equation}
 
+\begin{equation}
+    \frac{\partial f}{\partial x} \sin^2(x) = 2\sin(x)\cos(x) 
+\end{equation}
+
+\begin{equation}
+    \int r \sin^2(\theta) d\theta = \frac{r^2[2\theta - \sin(2\theta)]}{4}
+\end{equation}
 \end{document}
