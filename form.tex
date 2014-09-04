@@ -13,10 +13,17 @@
 \begin{document}
 \maketitle
 
+\section{Suites}
+Si la suite $|a_k|_k$ converge, alors la suite $(a_k)_k$ converge également, mais la réciproque n'est pas vraie
+\begin{equation}
+    \lim_{k\rightarrow\inf}(1+\frac{1}{k})^{xk} = e^x
+\end{equation}
+
+
 \section{Séries}
 \subsection{Opérations}
 \begin{equation}
-    \sum_{i=1}^{n} ai = a\sum_{i=1}^{n} i
+    \sum_{i=1}^{n} \lambda i = \lambda\sum_{i=1}^{n} i
 \end{equation}
 
 \begin{equation}
@@ -39,8 +46,14 @@
 \subsection{Convergence}
 Si $|x| < 1$ 
 \begin{equation}
-    \sum_{i=1}^{n} x^i = \frac{1}{1-x}
+    \sum_{i=1}^{\inf} x^i = \frac{1}{1-x}
 \end{equation}
+
+\paragraph{Série harmonique}
+\begin{equation}
+    \sum_{i=1}^{\inf} \frac{1}{i^m}
+\end{equation}
+Converge ssi $ m > 1 $
 
 \section{Analyse de fonctions}
 \subsection{Fonctions réelles}
@@ -61,8 +74,36 @@ Sa matrice Hessienne est donnée par
 
 \begin{itemize}
     \item Si $det(\mathbb{H}_f)(x, y) < 0$, alors $(x, y)$ est un point de selle
-    \item Si $r(x, y) > 0$, alors $(x, y)$ est un minimum local
-    \item Si $r(x, y) < 0$, alors $(x, y)$ est un maximum local
+    \item Si $r(x, y) > 0$, alors $(x, y)$ est un \textbf{minimum} local
+    \item Si $r(x, y) < 0$, alors $(x, y)$ est un \textbf{maximum} local
 \end{itemize}
+
+
+\section{Série de Fourier réelle}
+Soit $ f : \mathbb{R} \rightarrow \mathbb{R} $, $2\pi$ périodique. Sa série de Fourier est
+\begin{equation}
+    \begin{cases}
+        S_f(t) = \frac{a_0}{2} + \sum_{n=1}^{\inf} a_n \cos(nt) + b_n \sin(nt)\\
+        a_0 = \frac{1}{\pi}\int_{-\pi}^{\pi}f(t)dt\\
+        a_n = \frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\cos(nt)dt\\
+        b_n = \frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\sin(nt)dt
+    \end{cases}
+\end{equation}
+
+\begin{itemize}
+    \item Si $f$ est \textbf{paire}, tous les coefficients $b_n$ sont nuls.
+    \item Si $f$ est \textbf{impaire}, tous les coefficients $a_n$ sont nuls.
+\end{itemize}
+
+\section{Quelques dérivées et intégrales utiles}
+\begin{equation}
+    \frac{\partial f}{\partial x} \sin(kx) = k \cos(kx) 
+    \Leftrightarrow 
+    \int \sin(kx) dx = \frac{-\cos(kx)}{k}
+\end{equation}
+
+\begin{equation}
+    a
+\end{equation}
 
 \end{document}
