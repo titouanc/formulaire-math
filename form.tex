@@ -1,0 +1,68 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Formulaire de mathématiques}
+\author{Titouan \bsc{Christophe}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Séries}
+\subsection{Opérations}
+\begin{equation}
+    \sum_{i=1}^{n} ai = a\sum_{i=1}^{n} i
+\end{equation}
+
+\begin{equation}
+    \sum_{i=1}^{n} (i^x + i^y) = \sum_{i=1}^{n} i^x + \sum_{i=1}^{n} i^y
+\end{equation}
+
+\subsection{Valeur}
+\begin{equation}
+    \sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+\end{equation}
+
+\begin{equation}
+    \sum_{i=k}^{n} (ai + b) = a\times\frac{n(n+1) - k(k-1)}{2} + b(n-k+1)
+\end{equation}
+
+\begin{equation}
+    \sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}
+\end{equation}
+
+\subsection{Convergence}
+Si $|x| < 1$ 
+\begin{equation}
+    \sum_{i=1}^{n} x^i = \frac{1}{1-x}
+\end{equation}
+
+\section{Analyse de fonctions}
+\subsection{Fonctions réelles}
+Soit $ f : \mathbb{R}^2 \rightarrow \mathbb{R} : (x, y) \rightarrow f(x, y) = z $. 
+Sa matrice Hessienne est donnée par
+\begin{equation}
+    \mathbb{H}_f = 
+    \begin{pmatrix}
+       \frac{\partial^2f}{\partial x^2} & \frac{\partial^2f}{\partial y\partial x} \\
+       \frac{\partial^2f}{\partial x\partial y} & \frac{\partial^2f}{\partial y^2} 
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        r(x,y) & s(x,y) \\
+        s(x,y) & t(x,y)
+    \end{pmatrix}
+\end{equation}
+
+\begin{itemize}
+    \item Si $det(\mathbb{H}_f)(x, y) < 0$, alors $(x, y)$ est un point de selle
+    \item Si $r(x, y) > 0$, alors $(x, y)$ est un minimum local
+    \item Si $r(x, y) < 0$, alors $(x, y)$ est un maximum local
+\end{itemize}
+
+\end{document}
